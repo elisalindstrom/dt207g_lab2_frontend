@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #fff6f0;
+  background-color: #f8f8ff;
   color: #000000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.5;
@@ -14,12 +14,83 @@ body {
   text-align: left;
 }
 
+h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid;
+  background-color: #000000;
+  color: #f8f8ff;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  min-height: 44px;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #f8f8ff;
+  color: #000000;
+}
+
 #app {
   width: 1126px;
   max-width: 100%;
-  margin: auto;
-  text-align: center;
+  margin: 0 auto;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+#center {
+  width: 600px;
+  max-width: 100%;
+  padding: 2rem 1rem;
+}
+
+/* Form */
+#add-form {
+  background-color: #fffaf0;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px #dcdcdc;
+  margin-bottom: 2rem;
+}
+
+#error-message {
+  color: tomato;
+  margin-top: 0.5rem;
+}
+
+label {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  min-height: 44px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  cursor: text;
+}
+
+select {
+  max-width: 230px;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  min-height: 44px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  cursor: pointer;
 }

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mitt CV - Lägg till</title>
+</head>
+
+<body>
+    <div id="app">
+        <section id="center">
+            <h1>Lägg till ny arbetserfarenhet</h1>
+            <form id="add-form" autocomplete="off">
+                <label for="companyname">Företag</label>
+                <input id="companyname" name="companyname" type="text" required>
+
+                <label for="jobtitle">Jobbtitel</label>
+                <input id="jobtitle" name="jobtitle" type="text" required>
+
+                <label for="startdate">Startdatum</label>
+                <input id="startdate" name="startdate" type="date" required>
+
+                <label for="enddate">Slutdatum</label>
+                <input id="enddate" name="enddate" type="date" required>
+
+                <button id="submit-btn" type="submit">Spara</button>
+                <p id="error-message" class="hidden"></p>
+            </form>
+        </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

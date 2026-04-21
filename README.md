@@ -4,4 +4,4 @@ Applikation som hämtar data från en webbtjänst som hanterar arbetserfarenhete
 Det går förutom att hämta data även att lägga till ny data via ett formulär samt radera data.
 
 Webbtjänst som används: https://dt207g-lab2.onrender.com/api/workexperience
-Länk till applikationen:
+Länk till applikationen: https://dt207g-lab2-frontend.onrender.com

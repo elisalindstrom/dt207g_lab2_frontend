@@ -22,6 +22,10 @@ function displayWorkexperiences(workexperience) {
 
     workexperience.forEach(experience => {
         const liEl = document.createElement("li");
+        const titleEl = document.createElement("span");
+        titleEl.classList.add("bold");
+        const companyEl = document.createElement("span");
+        const dateEl = document.createElement("span");
         const startdate = new Date(experience.startdate).toLocaleDateString();
         let enddate = experience.enddate;
 
@@ -32,14 +36,30 @@ function displayWorkexperiences(workexperience) {
             enddate = "Pågående";
         }
 
-        liEl.textContent = `${experience.jobtitle}, ${experience.companyname} (${startdate} - ${enddate})`;
+        titleEl.textContent = `${experience.jobtitle}`;
+        companyEl.textContent = `${experience.companyname}`;
+        dateEl.textContent = `${startdate} - ${enddate}`;
 
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Ta bort";
 
         // Lägg till eventlistener
+        deleteBtn.addEventListener("click", () => {
+            deleteWorkexperience(experience.id);
+        });
 
-        liEl.appendChild(deleteBtn);
+        liEl.append(titleEl, companyEl, dateEl, deleteBtn);
         cvList.appendChild(liEl);
     });
+}
+
+async function deleteWorkexperience(id) {
+    try {
+        const response = await fetch(`https://dt207g-lab2.onrender.com/api/workexperience/${id}`, {
+            method: "DELETE"
+        });
+        fetchWorkexperiences();
+    } catch (error) {
+        console.error("Något gick fel:" + error);
+    }
 }

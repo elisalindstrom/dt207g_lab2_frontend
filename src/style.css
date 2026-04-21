@@ -9,7 +9,7 @@ body {
   background-color: #f8f8ff;
   color: #000000;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-size: 16px;
   text-align: left;
 }
@@ -17,6 +17,10 @@ body {
 h1 {
   font-size: 24px;
   margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 a {
@@ -33,6 +37,7 @@ button {
   font-weight: 600;
   font-size: 16px;
   min-height: 44px;
+  max-width: 90px;
   margin-top: 0.5rem;
 }
 
@@ -70,6 +75,16 @@ header {
   justify-content: center;
 }
 
+#cv-list li {
+  background-color: #fffaf0;
+  box-shadow: 0 3px 10px #dcdcdc;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
 /* Form */
 #form {
   background-color: #fffaf0;
@@ -77,6 +92,10 @@ header {
   border-radius: 20px;
   box-shadow: 0 3px 10px #dcdcdc;
   margin-bottom: 2rem;
+}
+
+#form li {
+  margin-left: 1rem;
 }
 
 #message {

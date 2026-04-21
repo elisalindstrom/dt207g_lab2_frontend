@@ -1,5 +1,3 @@
-import './style.css'
-
 fetchWorkexperiences();
 
 // Hämta data från API
@@ -25,10 +23,23 @@ function displayWorkexperiences(workexperience) {
     workexperience.forEach(experience => {
         const liEl = document.createElement("li");
         const startdate = new Date(experience.startdate).toLocaleDateString();
-        const enddate = new Date(experience.enddate).toLocaleDateString();
+        let enddate = experience.enddate;
+
+        // Kontroll av enddate
+        if (enddate) {
+            enddate = new Date(experience.enddate).toLocaleDateString();
+        } else {
+            enddate = "Pågående";
+        }
 
         liEl.textContent = `${experience.jobtitle}, ${experience.companyname} (${startdate} - ${enddate})`;
 
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Ta bort";
+
+        // Lägg till eventlistener
+
+        liEl.appendChild(deleteBtn);
         cvList.appendChild(liEl);
     });
 }

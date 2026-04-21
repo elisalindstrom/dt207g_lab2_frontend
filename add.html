@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mitt CV - Lägg till</title>
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body>
@@ -22,25 +23,25 @@
 
         <section id="center">
             <h1>Lägg till ny arbetserfarenhet</h1>
-            <form id="add-form" autocomplete="off">
+            <form id="form" autocomplete="off">
                 <label for="companyname">Företag</label>
-                <input id="companyname" name="companyname" type="text" required>
+                <input id="companyname" name="companyname" type="text">
 
                 <label for="jobtitle">Jobbtitel</label>
-                <input id="jobtitle" name="jobtitle" type="text" required>
+                <input id="jobtitle" name="jobtitle" type="text">
 
                 <label for="startdate">Startdatum</label>
-                <input id="startdate" name="startdate" type="date" required>
+                <input id="startdate" name="startdate" type="date">
 
                 <label for="enddate">Slutdatum</label>
-                <input id="enddate" name="enddate" type="date" required>
+                <input id="enddate" name="enddate" type="date">
 
                 <button id="submit-btn" type="submit">Spara</button>
-                <p id="error-message" class="hidden"></p>
+                <ul id="message" class="hidden"></ul>
             </form>
         </section>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/add.js"></script>
 </body>
 
 </html>

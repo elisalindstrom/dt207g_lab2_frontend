@@ -71,7 +71,7 @@ header {
 }
 
 /* Form */
-#add-form {
+#form {
   background-color: #fffaf0;
   padding: 1rem;
   border-radius: 20px;
@@ -79,8 +79,8 @@ header {
   margin-bottom: 2rem;
 }
 
-#error-message {
-  color: tomato;
+#message {
+  color: darkcyan;
   margin-top: 0.5rem;
 }
 

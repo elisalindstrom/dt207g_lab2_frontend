@@ -6,9 +6,9 @@ async function fetchWorkexperiences() {
         const response = await fetch("https://dt207g-lab2.onrender.com/api/workexperience");
         const workexperience = await response.json();
 
-        if (!workexperience.length) return;
-
-        console.log(workexperience)
+        if (!workexperience.length) {
+            return;
+        }
         displayWorkexperiences(workexperience);
     } catch (error) {
         console.error("Något gick fel:" + error);

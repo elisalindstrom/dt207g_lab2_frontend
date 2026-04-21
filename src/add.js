@@ -3,7 +3,8 @@ const companyname = document.querySelector("#companyname");
 const jobtitle = document.querySelector("#jobtitle");
 const startdate = document.querySelector("#startdate");
 const enddate = document.querySelector("#enddate");
-const message = document.querySelector("#message");
+const message = document.querySelector("#error");
+const confirmation = document.querySelector("#confirmation");
 
 // Validering efter submit
 form.addEventListener("submit", (event) => {
@@ -54,7 +55,8 @@ async function createWorkexperience() {
             },
             body: JSON.stringify(experience)
         })
-        message.textContent = "Arbetserfarenhet tillagd";
+        confirmation.textContent = "Arbetserfarenhet tillagd";
+        form.reset();
     } catch (error) {
         console.error("Något gick fel:" + error);
     }
